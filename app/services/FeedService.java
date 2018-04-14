@@ -13,6 +13,7 @@ import java.util.concurrent.ExecutionException;
 public class FeedService {
     public FeedResponse getFeedQuery(String query){
         FeedResponse feedResponseObject=new FeedResponse();
+
         try{
             WSRequest feedReqest = WS.url("https://news.google.com/news");
             CompletionStage<WSResponse> responsepromise = feedReqest
