@@ -48,6 +48,13 @@ public class MessageActor extends UntypedActor {
             out.tell(mapper.writeValueAsString(messageObject), self());
 
         }
+        else{
+            Message message1=new Message();
+            message1.text="Invalid Request";
+            message1.sender= BOT;
+            out.tell(mapper.writeValueAsString(message1), self());
+
+        }
 
     }
 
