@@ -8,7 +8,7 @@ app.config(function ($mdThemingProvider) {
 app.controller('chatController', function ($scope, $sce) {
 
 
-    var exampleSocket = new WebSocket('wss://swiftcode-newsbot-utk.herokuapp.com/chat');
+    var exampleSocket = new WebSocket('wss://swiftcode-newsbot-utk.herokuapp.com/chatSocket');
     exampleSocket.onmessage = function (event) {
 
         var jsonData = JSON.parse(event.data);
