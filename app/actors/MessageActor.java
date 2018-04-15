@@ -34,7 +34,7 @@ public class MessageActor extends UntypedActor {
     @Override
     public void onReceive(Object message) throws Throwable {
         ObjectMapper mapper = new ObjectMapper();
-        if (message instanceof String) {
+        if ((message instanceof String)&&(message!="")) {
             Message messageObject = new Message();
             messageObject.text=(String)message;
             messageObject.sender= USER;
